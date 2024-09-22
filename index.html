@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quote-container">
+        <div id="message" class="hidden"></div>
+        <select id="quote-category">
+            <option value="inspirational">Inspirational</option>
+            <option value="motivational">Motivational</option>
+            <option value="wisdom">Wisdom</option>
+            <option value="love">Love</option>
+            <option value="famous-quotes">Famous</option>
+        </select>
+        <button id="share-quote">Share on Twitter</button>
+        <button id="add-to-favorites">Add to Favorites</button>
+        <button id="view-favorites">Favorites</button>
+        <blockquote id="quote">
+            Click the button to get new quote.
+        </blockquote>
+        <cite id="author"></cite>
+        <button id="new-quote">New Quote</button>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

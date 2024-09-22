@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quote-container, .favorites-container {
+    text-align: center;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    background-image: url('https://tse2.mm.bing.net/th/id/OIP.pDBoOQivWVsYzzV1G1RKrwHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.quote-container:hover, .favorites-container {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.favorites-container h2 {
+    color: #ca1717;
+}
+
+.filter-container, .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-item {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+select#quote-category {
+    background-color: #ca1717;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-style: italic;
+    margin-right: 240px;
+}
+
+input#author-filter {
+    border-radius: 5px;
+    padding: 5px 5px;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+blockquote#quote {
+    /* font-family: 'Patrick Hand' ,cursive; */
+    font-size: 1.8em;
+    font-weight: 500;
+    font-style: italic;
+    color: #ca1717;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    quotes: "“" "”" "‘" "’";
+    background-color: rgba(255, 255, 255, 0.347);
+}
+
+blockquote#carousel-quote {
+    font-size: 1.8em;
+    font-style: italic;
+    color: #ca1717;
+    margin: 0 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.347);
+    padding: 20px;
+    border-radius: 8px;
+    quotes: "“" "”";
+}
+
+blockquote#quote::before, blockquote#carousel-quote::before {
+    content: open-quote;
+    font-size: 2em;
+    color: #ffffff;
+    vertical-align: bottom;
+}
+
+blockquote#quote::after, blockquote#carousel-quote::after {
+    content: close-quote;
+    font-size: 2em;
+    color: #ffffff;
+    vertical-align: top;
+}
+
+cite#author, cite#carousel-author {
+    font-style: italic;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #f4f6f8;
+    display: block;
+    margin-top: 10px;
+}
+
+button#new-quote, button#share-quote, button#view-favorites, button#add-to-favorites, button#back-to-home, button#clear-filter, .carousel-button {
+    background-color: #ca1717;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button#clear-filter {
+    padding: 8px 16px;
+}
+
+select#sort-options {
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #ca1717;
+    color: #ffffff;
+}
+
+label {
+    margin-right: 10px;
+    color: #ca1717;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+button#back-to-home {
+    padding: 10px 50px;
+}
+
+button#new-quote:hover, button#share-quote:hover, button#view-favorites:hover, button#add-to-favorites:hover, button#back-to-home:hover, button#clear-filter:hover, .carousel-button:hover {
+    background-color: white;
+    color: #ca1717;
+    outline: none;
+}
+
+button#next-quote {
+    margin-left: 20px;
+}
+
+button.speak-fav-quote, #speak-carousel-quote {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30%;
+}
+
+button.speak-fav-quote:hover, #speak-carousel-quote:hover {
+    background-color: #45a049;
+}
+
+.favorites-container {
+    padding: 20px;
+}
+
+.favorites-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#favorites-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#favorites-list li {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    background-color: #f9f9f97d;
+    color: #ca1717;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-style: italic;
+    quotes: "“" "”";
+}
+
+#favorites-list button {
+    background-color: #f44336;
+    margin-left: 10px;
+    position: absolute;
+    right: 42%;
+    top: 100%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+#favorites-list button:hover {
+    background-color: #d32f2f;
+}
+
+#message {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.success {
+    background-color: #ddffdd;
+    color: #4CAF50;
+    border-left: 6px solid #4CAF50;
+}
+
+.error {
+    background-color: #ffdddd;
+    color: #d8000c;
+    border-left: 6px solid #f44336;
+}    
+
+
+@media (max-width: 800px) {
+    .quote-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    button#new-quote, button#share-quote, button#view-favorites, button#add-to-favorites {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    blockquote#quote {
+        font-size: 2.5em;
+    }
+
+    cite#author {
+        font-size: 2em;
+    }
+}

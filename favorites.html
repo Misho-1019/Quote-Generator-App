@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Quotes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="favorites-container">
+        <h2>Favorite Quotes</h2>
+        <div class="filter-container">
+
+            <div class="filter-item">
+                <label for="author-filter">Filter by Author:</label>
+                <input type="text" id="author-filter" placeholder="Type author name...">
+                <button id="clear-filter">Clear Filter</button>
+            </div>
+            
+            <div class="filter-item">
+                <label for="sort-options">Sort By:</label>
+                <select id="sort-options">
+                    <option value="default">Default</option>
+                    <option value="author">Author</option>
+                    <option value="length">Quote Length</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="carousel-container">
+            <button id="prev-quote" class="carousel-button">Prev</button>
+            <blockquote id="carousel-quote"></blockquote>
+            <cite id="carousel-author"></cite>
+            <button id="next-quote" class="carousel-button">Next</button> 
+        </div>
+
+        <ul id="favorites-list"></ul>
+        <button id="back-to-home">Home</button>
+    </div>
+
+    <script src="favorites.js"></script>
+</body>
+</html>
